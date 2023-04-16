@@ -1,0 +1,43 @@
+
+<h2 class="text-center">Estas son las peticiones de todos los usuarios</h2>
+
+<div class="text-center">
+  <a *ngIf="user.usertype == 1" class="btn btn-success" routerLink="/subir-productos">Subir Productos</a>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Imagen</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Cantidad</th>
+      <th *ngIf="user.usertype == 1"  scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let producto of ProductosAdmin">
+      <th scope="row">{{ producto.id }}</th>
+      <td><img src="http://localhost:8000/{{producto.image}}" class="card-img-top" alt="..." style="height: 50px; width: 50px;"></td>
+      <td>{{ producto.title }}</td>
+      <td>{{ producto.description }}</td>
+      <td>{{ producto.price }}</td>
+      <td>{{ producto.quantity }}</td>
+
+      <td>
+
+        <button class="btn btn-danger"  *ngIf="user.usertype == 1"  (click)="deleteData(producto.id)">
+          Eliminar
+        </button>
+
+        <!-- routerLink="/update/{{ petition.id }}" -->
+        <button class="btn btn-info" *ngIf="user.usertype == 1" routerLink="/update/{{ producto.id }}">
+          Actualizar
+        </button>
+
+      </td>
+    </tr>
+  </tbody>
+</table>

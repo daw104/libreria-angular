@@ -1,0 +1,102 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
+
+<!-- Solo mostramos el conetnido que esta en este container en el index de la aplicacion -->
+<ng-container *ngIf="currentRoute === '/'">
+ 
+  <h1 class="text-center">Bienvenidos a la casa del Libro</h1>
+
+  <div class="container mx-auto">
+
+
+    <div class="row mx-auto">
+      <div class="col-md-6">
+        <div class="text-container d-flex align-items-center justify-content-center">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat laudantium voluptate aspernatur excepturi unde ducimus voluptatem minus inventore, doloribus blanditiis optio temporibus cumque! Reprehenderit quas unde non eaque alias ipsa!</p>
+      </div>
+      </div>
+      <div class="col-md-6">
+        <img src="../assets/imgs/libreria-home.jpg" alt="Image description">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-white bg-success" style="background-color: #f1f1f1;">
+    <!-- Grid container -->
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+
+        <!-- Twitter -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-twitter"></i
+        ></a>
+
+        <!-- Google -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-google"></i
+        ></a>
+
+        <!-- Instagram -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram"></i
+        ></a>
+
+        <!-- Linkedin -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <!-- Github -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright:
+      <a class="text-dark" href="#">Casa del Libro</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+</ng-container>
+

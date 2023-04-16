@@ -1,0 +1,20 @@
+<h4 class="text-center">Estos son nuestros productos</h4>
+
+
+
+<div class="conrainer pt-5">
+    <div class="row pt-5">
+        <div *ngFor="let producto of Productos" class="col-4 pt-5">
+
+          <div  class="card" style="width: 18rem;">
+            <img src="http://localhost:8000/{{producto.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ producto.title }}</h5>
+              <p class="card-text">Precio:  {{ producto.price }}€</p>
+              <p class="card-text">Description: {{ producto.description }}</p>
+            </div>
+
+          </div>
+        </div>
+    </div>
+</div>

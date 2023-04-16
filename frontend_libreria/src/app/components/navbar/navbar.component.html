@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light bg-light justify-content-between color-rojo">
+  <div>
+    <a class="navbar-brand" routerLink="/">Casa del Libro</a>
+    <a class="navbar-brand" routerLink="productos" >Productos</a>
+
+  </div>
+
+
+  <div>
+    <a class="navbar-brand" routerLink="login" *ngIf="!loggedIn">Login</a>
+    <a class="navbar-brand" routerLink="register" *ngIf="!loggedIn">Registrate</a>
+    <a class="navbar-brand" routerLink="profile" *ngIf="loggedIn">Perfil</a>
+    <a class="navbar-brand" href="#" (click)="logout($event)" *ngIf="loggedIn">Logout</a>
+  </div>
+
+
+
+</nav>
